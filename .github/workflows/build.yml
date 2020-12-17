@@ -26,5 +26,6 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: build
-        run: mkdir -p build && cd build && cmake .. && make -j
+      - name: build & test
+        run: mkdir -p build && cd build && cmake .. && make -j && ./test
+    
