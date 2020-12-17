@@ -1,4 +1,4 @@
-#include "math.h"
+#include "v3.h"
 
 v3 v3_new(VECTOR_TYPE x, VECTOR_TYPE y, VECTOR_TYPE z) {
   v3 v;
@@ -7,6 +7,8 @@ v3 v3_new(VECTOR_TYPE x, VECTOR_TYPE y, VECTOR_TYPE z) {
   v.data[2] = z;
   return v;
 }
+
+void v3_print(v3 v) { printf("(%f, %f, %f)", v.data[0], v.data[1], v.data[2]); }
 
 v3 v3_add(v3 v, v3 w) {
   v3 res;

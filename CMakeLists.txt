@@ -12,3 +12,4 @@ file(GLOB test_SRC
 add_executable(test test.c ${include_SRC} ${test_SRC})
 add_executable(main main.c ${include_SRC})
 target_compile_options(main PUBLIC -Wall -Werror -Wextra)
+target_compile_options(test PUBLIC -Wall -Werror -Wextra)

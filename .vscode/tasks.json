@@ -15,7 +15,7 @@
                 "echo": true,
                 "reveal": "always",
                 "focus": false,
-                "panel": "dedicated",
+                "panel": "shared",
                 "showReuseMessage": false,
                 "clear": true,
                 "group": "build"
@@ -23,10 +23,7 @@
         },
         {
             "label": "build & run",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "command": "./build/main",
             "dependsOn": "build",
             "problemMatcher": [],
@@ -34,10 +31,28 @@
                 "echo": true,
                 "reveal": "always",
                 "focus": false,
-                "panel": "dedicated",
+                "panel": "shared",
                 "showReuseMessage": false,
                 "clear": true,
                 "group": "build"
+            }
+        },{
+            "label": "build & run & test",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./build/test",
+            "dependsOn": "build & run",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true,
+                "group": "test"
             }
         }
     ]
