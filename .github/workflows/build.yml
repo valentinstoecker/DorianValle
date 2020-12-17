@@ -29,5 +29,5 @@ jobs:
       - name: build
         run: mkdir -p build && cd build && cmake .. && make -j
       - name: test
-        run: ./test
+        run: ./build/test
     
