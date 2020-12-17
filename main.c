@@ -14,6 +14,5 @@ int main() {
   printf("\n");
   v3_print(v3_new(10, -20, 30));
   printf("\n");
-
   return 0;
 }
