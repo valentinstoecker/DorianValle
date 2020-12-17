@@ -5,4 +5,10 @@ file(GLOB include_SRC
      "include/*.h"
      "include/*.c"
 )
+file(GLOB test_SRC
+     "test/*.h"
+     "test/*.c"
+)
+add_executable(test test.c ${include_SRC} ${test_SRC})
 add_executable(main main.c ${include_SRC})
+target_compile_options(main PUBLIC -Wall -Werror -Wextra)
