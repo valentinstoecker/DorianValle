@@ -2,5 +2,5 @@
 
 int main(int argc, char const *argv[]) {
   hello_world();
-  return 0;
+  int return 0;
 }
