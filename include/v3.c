@@ -1,5 +1,7 @@
 #include "v3.h"
 
+#include <math.h>
+
 v3 v3_new(VECTOR_TYPE x, VECTOR_TYPE y, VECTOR_TYPE z) {
   v3 v;
   v.data[0] = x;

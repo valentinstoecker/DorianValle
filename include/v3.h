@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdio.h>
 
 #define VECTOR_TYPE double
