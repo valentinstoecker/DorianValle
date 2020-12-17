@@ -22,7 +22,7 @@ string* string_new() {
   if (str == NULL) {
     return NULL;
   }
-  str->size = 0;
+  str->size = 1;
   str->data = NULL;
   return str;
 }
