@@ -10,9 +10,9 @@ int main() {
   string_print(test);
   string_free(test);
   printf("\n");
-  v3_print(v3_new(1, 2, 3));
+  v3_print(v3_new(1, 2, -3));
   printf("\n");
-  v3_print(v3_new(10, 20, 30));
+  v3_print(v3_new(10, -20, 30));
   printf("\n");
   return 0;
 }
