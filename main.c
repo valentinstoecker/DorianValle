@@ -5,6 +5,7 @@
 #include "include/v3.h"
 
 int main() {
+  setbuf(stdout, NULL);
   hello_world();
   string* test = string_from_char_ptr("Test");
   string_print(test);
@@ -14,5 +15,10 @@ int main() {
   printf("\n");
   v3_print(v3_new(10, -20, 30));
   printf("\n");
+  int d = 0;
+  scanf("%d", &d);
+  printf("%d\n", d);
+  scanf("%d", &d);
+  printf("%d\n", d);
   return 0;
 }
