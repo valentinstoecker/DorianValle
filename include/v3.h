@@ -9,7 +9,7 @@ v3 v3_new(VECTOR_TYPE x, VECTOR_TYPE y, VECTOR_TYPE z);
 
 void v3_print(v3 v);
 
-v3 add(v3 v, v3 w);
+v3 v3_add(v3 v, v3 w);
 v3 v3_sub(v3 v, v3 w);
 v3 v3_mult(VECTOR_TYPE r, v3 v);
 
