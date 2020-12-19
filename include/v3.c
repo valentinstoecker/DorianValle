@@ -36,9 +36,10 @@ v3 v3_mult(VECTOR_TYPE r, v3 v) {
   return res;
 }
 
-VECTOR_TYPE v3_abs(v3 v) {
-  return sqrt(v.data[0] * v.data[0] + v.data[1] * v.data[1] +
-              v.data[2] * v.data[2]);
+VECTOR_TYPE v3_dot(v3 v, v3 w) {
+  return v.data[0] * w.data[0] + v.data[1] * w.data[1] + v.data[2] * w.data[2];
 }
+
+VECTOR_TYPE v3_abs(v3 v) { return sqrt(v3_dot(v, v)); }
 
 VECTOR_TYPE v3_dist(v3 v, v3 w) { return v3_abs(v3_sub(v, w)); }
