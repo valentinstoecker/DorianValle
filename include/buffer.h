@@ -1,6 +1,6 @@
 #include <inttypes.h>
 #include <stdlib.h>
-#include <strings.h>
+#include <string.h>
 
 typedef struct {
   uint64_t size;
