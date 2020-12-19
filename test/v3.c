@@ -22,6 +22,12 @@ int v3_add_sub_test() {
   return 0;
 }
 
+int v3_dot_test() {
+  CHECK(v3_dot(v3_new(1, 0, 0), v3_new(0, 1, 1)) == 0)
+  CHECK(v3_dot(v3_new(1, 0, 0), v3_new(2, 1, 1)) == 2)
+  return 0;
+}
+
 int v3_abs_test() {
   CHECK(v3_abs(v3_new(1, 2, 2)) == 3.0)
   CHECK(v3_abs(v3_new(1, -2, 2)) == 3.0)
@@ -46,6 +52,7 @@ int v3_test() {
   TEST(v3_new_test, "New")
   TEST(v3_add_sub_test, "Add_Sub")
   TEST(v3_mult_test, "Mult")
+  TEST(v3_dot_test, "Dot")
   TEST(v3_abs_test, "Abs")
   TEST(v3_dist_test, "Dist")
   return 0;
