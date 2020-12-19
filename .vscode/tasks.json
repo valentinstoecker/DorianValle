@@ -7,7 +7,7 @@
             "group": "build",
             "label": "build",
             "type": "shell",
-            "command": "mkdir -p build && cd build && cmake .. && make -j",
+            "command": "mkdir -p build && cd build && cmake .. && make -j main",
             "problemMatcher": [
                 "$gcc"
             ],
@@ -19,6 +19,24 @@
                 "showReuseMessage": false,
                 "clear": true,
                 "group": "build"
+            }
+        },
+        {
+            "group": "test",
+            "label": "build test",
+            "type": "shell",
+            "command": "mkdir -p build && cd build && cmake .. && make -j test",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "group": "test"
             }
         },
         {
@@ -55,22 +73,33 @@
                 "group": "build"
             }
         },{
+            "label": "test",
+            "group": "build",
+            "command": "./build/test",
+            "dependsOn": "build test",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "group": "test"
+            }
+        },{
             "label": "build & run & test",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "command": "./build/test",
-            "dependsOn": "build & run",
+            "dependsOn": ["build & run", "test"],
+            "dependsOrder": "parallel",
             "problemMatcher": [],
             "presentation": {
-                "echo": true,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "dedicated",
-                "showReuseMessage": false,
-                "clear": true,
-                "group": "test"
+                "echo": false,
+                "reveal": "never",
             }
         }
     ]
