@@ -2,10 +2,12 @@
 
 #include "include/hello_world.h"
 #include "include/string.h"
+#include "include/test.h"
 #include "include/v3.h"
 
 int main() {
   setbuf(stdout, NULL);
+  test();
   hello_world();
   string* test = string_from_char_ptr("Test");
   string_print(test);
