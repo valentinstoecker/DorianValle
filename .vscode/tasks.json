@@ -88,7 +88,8 @@
                 "clear": true,
                 "group": "build"
             }
-        },{
+        },
+        {
             "label": "test",
             "group": "build",
             "command": "./build/test",
@@ -103,14 +104,18 @@
                 "clear": true,
                 "group": "test"
             }
-        },{
+        },
+        {
             "label": "build & run & test",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "command": "./build/test",
-            "dependsOn": ["build & run", "test"],
+            "dependsOn": [
+                "build & run",
+                "test"
+            ],
             "dependsOrder": "parallel",
             "problemMatcher": [],
             "presentation": {
